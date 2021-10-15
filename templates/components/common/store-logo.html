@@ -1,0 +1,10 @@
+<a href="{{urls.home}}" class="header-logo__link" data-header-logo-link>
+    {{#if settings.store_logo.image}}
+        <div class="header-logo-image-container">
+            <img class="header-logo-image h-show" src="{{getImage settings.store_logo.image}}" alt="{{settings.store_logo.title}}" title="{{settings.store_logo.title}}">
+            <img class="header-logo-image h-hide" src="{{cdn '../img/homepage/acceleration-brand-logo.png'}}" alt="{{settings.store_logo.title}}" title="{{settings.store_logo.title}}">
+        </div>
+    {{else}}
+        <span class="header-logo-text">{{settings.store_logo.title}}</span>
+    {{/if}}
+</a>

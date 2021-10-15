@@ -1,0 +1,44 @@
+<div class="subs-container">
+    <div class="subs-con" >
+        <img src="{{cdn '..img/homepage/footer-envelope.png'}}">
+    </div>
+    <div class="subs-con-1" >
+        <h5>{{lang 'newsletter.subscribe'}}</h5>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.</p>
+    </div>
+</div>
+{{#if settings.show_newsletter_summary }}
+    <div class="footer-newsletter-summary"><p>{{settings.newsletter_summary}}</p>
+        </div>
+{{/if}}
+
+<div class="form-container subs-con-2">
+<form class="form" action="{{urls.subscribe.action}}" method="post">
+    <fieldset class="form-fieldset">
+        <input type="hidden" name="action" value="subscribe">
+        <input type="hidden" name="nl_first_name" value="bc">
+        <input type="hidden" name="check" value="1">
+        <div class="form-field">
+            <label class="form-label is-srOnly" for="nl_email">{{lang 'common.email_address'}}</label>
+            <div class="form-prefixPostfix wrap">
+                <i class="icon" aria-hidden="true" style="display: none;">
+                    <svg><use xlink:href="#icon-mail" /></svg>
+                </i>
+                <input class="form-input"
+                       id="nl_email"
+                       name="nl_email"
+                       type="email"
+                       value="{{customer.email}}"
+                       placeholder="{{lang 'newsletter.email_placeholder'}}"
+                       aria-describedby="alertBox-message-text"
+                       aria-required="true"
+                >
+                <input class="button button--primary form-prefixPostfix-button--postfix"
+                       type="submit"
+                       value="{{lang 'newsletter.subscribe_submit'}}"
+                >
+            </div>
+        </div>
+    </fieldset>
+</form>
+</div>
