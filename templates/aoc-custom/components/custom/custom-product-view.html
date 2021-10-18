@@ -67,6 +67,12 @@
                 </li>
             {{/each}}
         </ul>
+        <div>&nbsp;</div>        
+        <div>&nbsp;</div>
+        <div>&nbsp;</div>
+        <div class="click-lab-result">
+            <a href="#">Click here for lab results</a>
+        </div>
     </section>
     <section class="productView-details product-data">
         <div class="productView-product">
@@ -77,13 +83,12 @@
                     </div>
                 {{/or}}
             {{/if}}
-
-            <h1 class="productView-title main-heading" {{#if schema}}itemprop="name"{{/if}}>{{product.title}}</h1>
             {{#if product.brand}}
-                <span class="productView-brand"{{#if schema}} itemprop="brand" itemscope itemtype="http://schema.org/Brand"{{/if}}>
-                    <a href="{{product.brand.url}}"{{#if schema}} itemprop="url"{{/if}}><span{{#if schema}} itemprop="name"{{/if}}><strong>{{product.brand.name}}</strong></span></a>
-                </span>
-            {{/if}}
+            <span class="productView-brand"{{#if schema}} itemprop="brand" itemscope itemtype="http://schema.org/Brand"{{/if}}>
+                <a href="{{product.brand.url}}"{{#if schema}} itemprop="url"{{/if}}><span{{#if schema}} itemprop="name"{{/if}}><strong>{{product.brand.name}}</strong></span></a>
+            </span>
+           {{/if}}
+            <h1 class="productView-title main-heading" {{#if schema}}itemprop="name"{{/if}}>{{product.title}}</h1>
             <div class="productSKU">
                 <dt class="productView-info-name sku-label" {{#unless product.sku}} style="display: none;"{{/unless}}>{{lang 'products.sku'}}</dt>
                 <dd class="productView-info-value" data-product-sku{{#if schema}} itemprop="sku"{{/if}}>{{product.sku}}</dd>
@@ -139,7 +144,7 @@
                             {{lang 'products.reviews.link_to_review' total=product.num_reviews}}
                         </a>
                     {{else}}
-                        <span>{{lang 'products.reviews.link_to_review' total=product.num_reviews}}</span>
+                        <span class="reviews-label-count">{{lang 'products.reviews.link_to_review' total=product.num_reviews}}</span>
                     {{/if}}
                 {{/if}}
                 {{#if settings.show_product_reviews}}
@@ -151,7 +156,7 @@
                            <!-- <i class="icon" aria-hidden="true" style="position: relative; top: -1px;">
                                 <svg><use xlink:href="#icon-plus" /></svg>
                             </i> -->
-                           <strong style="text-decoration: underline;">{{lang 'products.reviews.new'}}</strong>
+                           <span class="write-review-label"><strong>{{lang 'products.reviews.new'}}</strong></span>
                         </a>
                     </button>
                     {{> components/products/modals/writeReview}}
@@ -160,7 +165,7 @@
     </div>
             <!--End of Product Write Review-->
             
-            {{> components/products/tabs schema=true }}
+            {{> aoc-custom/components/custom/custom-desc-tabs schema=true }}
 
             <div class="productView-specs">
             {{#all product.weight theme_settings.show_product_weight}}
@@ -227,7 +232,7 @@
                 <div class="productView-options-wrap" data-product-option-change style="display:none;">
                     {{inject 'showSwatchNames' theme_settings.show_product_swatch_names}}
                     {{#if product.options}}
-                        <div class="productView-options-inner">
+                        <div class="productView-options-inner custom-options-inner">
                             {{#each product.options}}
                                 {{{dynamicComponent 'components/products/options'}}}
                             {{/each}}
@@ -274,17 +279,18 @@
                     <span class="button button--primary button--out-of-stock">Out of Stock</span>
                 {{/if}}
             </form>
-
-            {{#if settings.show_wishlist}}
-                {{> components/common/wishlist-dropdown}}
-            {{/if}}
-            {{#if product.release_date }}
-                <p>{{product.release_date}}</p>
-            {{/if}}
-            
-            {{#unless is_ajax}}
-                {{> components/common/share url=product.url}}
-            {{/unless}}
+            <div class="wishlist-and-social">
+                {{#if settings.show_wishlist}}
+                    {{> aoc-custom/components/common/wishlist}}
+                {{/if}}
+                {{#if product.release_date }}
+                    <p>{{product.release_date}}</p>
+                {{/if}}
+                
+                {{#unless is_ajax}}
+                    {{> aoc-custom/components/common/social-share url=product.url}}
+                {{/unless}}
+            </div>
         </div>
     </section>
 </div>

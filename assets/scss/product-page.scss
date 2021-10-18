@@ -1,17 +1,106 @@
+.container.custom-prod {
+    max-width: 85%;
+    padding: 0;
+}
+
 .custom-product-container {
+
+    .productView{
+        @media only screen and (min-width: 801px){
+            justify-content: space-between;
+        }
+
+    }
+
+// Product Gallery Images
+    .productView-images {
+        @media only screen and (min-width: 801px){
+            flex: 0 1 50%;
+            max-width: 100%;
+            width: 50%;
+        }
+        .productView-image {
+            min-height: 366px;
+            min-width: inherit;
+            border: 1px solid #cccccc;
+        }
+        .productView-thumbnails img{
+            width: 100% !important;
+        }
+        .click-lab-result {
+            position: relative;
+            padding-top: 1.5rem;
+            a {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                background: #fff;
+                color: #8bd8bd;
+                padding: 15px 15px;
+                text-transform: uppercase;
+                font-family: "Almarai";
+                letter-spacing: 2px;
+                font-weight: 400;
+                width: 100%;
+                text-align: center;
+                border: 1px solid #8bd8bd;
+                @media screen and(min-width:481px) and (max-width: 992px) {
+                    font-size: 14px;
+                    letter-spacing: 0px;
+                }
+                &:hover{
+                    background: #1a2b58;
+                    color: #8bd8bd;
+                    border: 1px solid #1a2b58;
+                }
+                @media screen and (max-width: 637px) {
+                    padding: 15px 25px;
+                }
+                @media screen and (max-width: 480px) {
+                    padding: 15px 15px;
+                    font-size: 10px !important;
+                }
+                @media screen and (max-width: 400px) {
+                    font-size: 10px !important;
+                }
+    
+            }
+        }
+    }
+
+
+    .productView-details {
+        @media only screen and (min-width: 801px){
+            color: #4e4e4e;
+            flex: 0 1 48%;
+            padding: 0 0px;
+        }
+    }
+
+    // Product Title Label
     .main-heading {
         font-family: "Almarai";
         font-size: 24px;
         letter-spacing: 1px;
         color: #333333;
         font-weight: 500;
+        margin: 0.5rem 0;
+        line-height: 32px;
     }
     .productView-brand {
-        display: none;
+        font-family: "Almarai";
+        color: #888888;
+        text-transform: uppercase;
+        letter-spacing: 2px;
     }
     dt.productView-info-name.sku-label {
         font-weight: 900;
     }
+    .productView-options .form-field{
+        margin-bottom: 1rem;
+    }
+    // Product Pricing
     span.price.price--withoutTax {
         font-family: 'Open Sans';
         font-weight: 900;
@@ -21,5 +110,379 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+    }
+    span.reviews-label-count {
+        font-family: 'Open Sans';
+        color: #888888;
+        margin: 0 1rem;
+    }
+    .write-review-label{
+        text-decoration: underline;
+        font-family: 'Open Sans';
+        color: #333333;
+    }
+
+    // Product Info Tabs
+    .custom-tabcontainer{
+        padding: 0;
+        .accordion-navigation.toggleLink{
+            border-bottom-width: 1px;     
+            .is-open{
+                border-bottom: 0;
+            }
+            .accordion-title {
+                padding: 1.3rem 0.5rem;
+                border-bottom: 0;
+            }
+        }
+        .accordion-navigation.is-open{
+            .accordion-title {
+                padding: 1.5rem 0.5rem 0.5rem 0.5rem;
+                border-bottom: 0;
+            }
+        }
+
+        .accordion-content {
+            padding: 0.5rem 0.5rem;
+            font-family: "Open Sans";
+            color: #888888;
+            line-height: 1.7;
+            border-bottom: 1px solid #cccccc;
+            ul>li::marker{
+                color: #333333 !important;
+            }
+        }
+        h5.accordion-title {
+            font-family: 'Almarai';
+            color: #222222;
+            letter-spacing: 2px;
+            font-weight: 600;
+        }
+        .accordion-block:last-child .accordion-navigation.is-open {
+            border-bottom-width: 0px;
+            border-top: 1px solid #cccccc;
+        }
+
+    }
+// Flavor Selection
+    label.form-label {
+        color: #222222 !important;
+        text-transform: capitalize !important;
+        letter-spacing: 1px;
+    }
+    .form-radio:checked + .form-option {
+        border-color: #8bd8bd;
+        box-shadow: 0 0 0 1px  #8bd8bd;
+    }
+    .form-option:hover {
+        border-color: #8bd8bd;
+    }
+    .form-option-wrapper{
+        width: 100%;
+        padding-right: 0;
+        &:nth-child(2){
+            padding-left: 1rem;
+        }
+        &:nth-child(3){
+            padding-left: 1rem;
+        }
+        &:last-child{
+            padding-left: 1rem;
+        }
+    }
+
+    .set-rectangle-flex {
+        display: flex;
+        justify-content: space-between;
+    }
+    .form-field[data-product-attribute="set-rectangle"] .form-option {
+        padding: 10px 0px;
+        line-height: normal;
+        width: 100%;
+        display: flex;
+        align-items: center;
+    }
+    .form-option-variant {
+        font-size: 13px;
+        font-family: "Open Sans";
+        color: #888888;
+        width: 100%;
+
+    }
+    span.form-option-variant>img {
+        width: auto;
+        height: 45px;
+    }
+    input#form-action-addToCart {
+        background-color: #ffffff;
+        color: #1a2b58;
+        border: 1px solid #8bd8bd;
+        margin-bottom: -4px;
+        &:hover{
+            background: #1a2b58;
+            color: #8bd8bd;
+            border: 1px solid #1a2b58;
+        }
+    }
+    .set-select-flex {
+        display: inline-block;
+        width: 48%;
+        margin-bottom: 1rem;
+    }
+    .set-select-flex:last-child {
+        float: right;
+        width: 50%;
+    }
+    .form-select--small, .form-select--date {
+        background-position: right 0.5rem top 1rem;
+        height: 3.5rem;
+        color: #333333;
+        width: 100%;
+        max-width: 100rem;
+    }
+    // Quantity and Add to cart
+    .flex-quantity-cart {
+        display: flex;
+        align-items: center;
+
+
+        .form-action{
+            width: 75%;
+            margin: 0 !important;
+            .button{
+                @media screen and (min-width: 801px) {
+                    width: 100%;
+                }
+            }
+           
+        }
+        .form-field.form-field--increments{
+            margin-bottom: 0;
+            @media screen and (min-width: 1161px) {
+                width: 30%;
+            }
+            @media screen and (max-width: 1160px) {
+                width: 35%;
+            }
+            .form-label{
+                display: none;
+            }
+        }
+
+    }
+
+    .productView-options-wrap .productView-options-inner{
+        border-bottom: 0;
+        margin-bottom: 0;
+    }
+
+    // Add To Wishlist
+    .productView-options .form-action{
+        @media screen and (max-width: 1260px) {
+            margin-top: 1rem;
+        }
+    }
+
+    .wishlist-and-social {
+        display: flex;
+        align-items: center;
+        margin-top: 1rem;
+        justify-content: space-between;
+        border-top: 1px solid #888888;
+        border-bottom: 1px solid #888888;
+        margin-top: 2.5rem;
+
+        a.button.button--secondary.dropdown-menu-button.wishlist-button {
+            padding: 0 1rem 1rem 0;
+            border: 0;
+            margin: 0;
+        }
+
+        .socialLinks {
+            line-height: 25px;
+            .socialLinks-item{
+                margin: 0 14px 0px 0;
+            }
+        }
+    }
+
+}
+
+//========================================================
+/*Related Products*/
+.related-products{
+    max-width: 85%;
+    margin: 2.5rem auto 2.5rem;
+    h3{
+        font-family: 'Almarai';
+        font-size: 28px;
+        color: #222222;
+        font-weight: normal;
+        letter-spacing: 2px;
+        margin: 2.5rem 0 2.5rem;
+    }
+
+    ul>li.product:last-child {
+        padding-right: 0 !important;
+    }
+    ul>li.product:first-child {
+        padding-left: 0 !important;
+    }
+    ul>li.product{
+        @media screen and (max-width:480px) {
+            padding-left: 0 !important;
+        }
+    }
+    .productGrid{
+        width: 100%;
+        margin: 0;
+
+        .card .card-body{
+            justify-content: center;
+            border-right: 1px solid #ebebeb;
+            border-left: 1px solid #ebebeb;
+            padding: 0 0 0;
+
+            & > :first-child{
+                margin-bottom: 1rem;
+            }
+
+        }
+        .card .card-title {
+            text-align: center;
+            max-width: 80%;
+            margin: 0 auto;
+            a{
+                color: #444444;
+                font-weight: 500;
+                font-family: 'Almarai' !important;
+            }  
+        }
+        .card .card-text.brand-name{
+            padding: 1.5rem 0 0.2rem 0;
+            font-family: 'Almarai';
+            color: #666666;
+            text-transform: uppercase;
+            font-size: 12px;
+            margin-top: 1.2rem;
+            margin-bottom: 0.4rem;
+        }
+        .card .card-text{
+            justify-content: center;
+            text-align: center;
+            padding: 0.5rem 0 0rem 0 !important;
+            font-family: 'Almarai';
+            margin-bottom: 0;
+            
+            .price-section{
+                justify-content: center;
+                
+            }
+            span.price.price--withoutTax {
+                font-weight: 800;
+            }
+        }
+        .card-text.add-to-cart-button{
+            display: block; 
+        }
+        .card .button {
+            padding: 15px 15px;
+            background: #fff;
+            border: 1px solid #8bd8bd;
+            color: #1a2b58;
+            margin-bottom: 0;
+            font-family: 'Almarai';
+            letter-spacing: 2px;
+            border-radius: 0;
+
+            &:hover{
+                background: #1a2b58;
+                color: #8bd8bd;
+                border: 1px solid #1a2b58;
+            }
+
+        }
+        .card .card-figure{
+            border-bottom: 0;
+            padding-top: 5rem;
+        }
+
+    }
+    .top-seller {
+        position: relative;
+        padding-top: 1.5rem;
+        a.best-seller-link {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: #1a2b58;
+            color: #fff;
+            padding: 15px 15px;
+            text-transform: uppercase;
+            font-family: "Almarai";
+            letter-spacing: 2px;
+            font-weight: 400;
+            width: 25%;
+            text-align: center;
+            @media screen and(min-width:481px) and (max-width: 992px) {
+                font-size: 14px;
+                letter-spacing: 0px;
+            }
+            @media screen and (max-width: 800px) {
+                width: 50%;
+            }
+            @media screen and (max-width: 480px) {
+                width: 100%;
+            }
+            &:hover{
+                background: #1a2b58;
+                color: #8bd8bd;
+                border: 1px solid #1a2b58;
+            }
+            @media screen and (max-width: 637px) {
+                padding: 15px 25px;
+            }
+            @media screen and (max-width: 480px) {
+                padding: 15px 15px;
+                font-size: 10px !important;
+            }
+            @media screen and (max-width: 400px) {
+                font-size: 10px !important;
+            }
+
+        }
+    }
+
+    .productGrid .product {
+        @media screen and (max-width: 800px) {
+            flex: 0 1 50% !important;
+            max-width: 50% !important;
+            padding-left: 0.75rem;
+            padding-right: 0;
+        }
+        @media screen and (max-width: 480px) {
+            flex: 0 1 100% !important;
+            max-width: 100% !important;
+        }
+    }
+    
+}
+
+//========================================================
+// ACcordion 
+.custom-tabs{
+    max-width: 85% !important;
+    padding: 0px !important;
+    width: 100% !important;
+    margin-top: 4.5rem;
+    .accordion-block:last-child .accordion-navigation {
+        border-bottom-width: 1px;
+    }
+    .accordion-block:last-child .accordion-navigation.is-open{
+        border-bottom-width: 0 !important;
+    }
+    .accordion-content {
+        border-bottom: 1px solid #ebebeb;
     }
 }

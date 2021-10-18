@@ -10,6 +10,11 @@
 // .home-body{
 //     padding-top: 0 !important;
     // overflow-x: hidden;
+    .home-body{
+         padding-top: 0 !important;
+    }
+
+
     header.header{
         background: transparent !important;
         border-bottom: 0;
@@ -35,8 +40,8 @@
             color: #222222 !important;
             font-weight: 600 !important;   
             &:hover{
-                text-decoration: 3px solid #8bd8bd underline;
-            }         
+                text-decoration: 3px solid #8bd8bd underline !important;
+            }   
         }
         .navUser-action{
             color: #222222;
@@ -50,11 +55,11 @@
         }
         
         .navPages-action svg{
-            fill: #1a2b58;
-            stroke: #1a2b58;
+            fill: #222222 !important;
+            stroke: #222222 !important;
         }
         .mobileMenu-toggle .mobileMenu-toggleIcon, .mobileMenu-toggle .mobileMenu-toggleIcon::before, .mobileMenu-toggle .mobileMenu-toggleIcon::after, .mobileMenu-toggle.is-open .mobileMenu-toggleIcon::before, .mobileMenu-toggle.is-open .mobileMenu-toggleIcon::after {
-            background: #1a2b58;
+            background: #222222;
         }
         .header-logo-image-container {
             height: 50px;
@@ -174,239 +179,290 @@
 
 /*End of Toggle*/
 
-header.header {
-    background: url("../img/homepage/Accelerate-Brands-Banner.png") !important;
-    background-position: top;
-    background-repeat: no-repeat;
-    background-size: cover !important;
-    width: 100%;
-    border-bottom: 1px solid #fff !important;
-    @media screen and (max-width: 800px){
-        height: 58px !important;
+// Home Header
+.home-body{
+    header.header {
+        background: url("../img/homepage/Accelerate-Brands-Banner.png");
     }
-
-    .header-logo-image-container {
-        height: 50px;
-        width: auto;
-        @media only screen and (min-width: 801px) and (max-width: 992px){
-            min-height: 50px;
+    .navPages-action {
+        color: #fff !important;
+        font-family: 'Almarai';
+        &:hover{
+            text-decoration: 3px solid underline;
+            text-underline-offset: 0.7em;
         }
-        
+        svg{
+            font-size: 1.5rem;
+            fill: #fff !important;
+            stroke: #fff !important;
+        }
     }
-
-    .header-logo--wrap {
-        background: transparent;
-        padding: 0px 0 0px 0;
-        @media only screen and (max-width: 992px){
-            padding: 0; 
+    .navUser-action {
+        color: #fff !important;
+        .h-show {
+            display: none;
+        }
+        .h-hide {
+            display: block;
         }
 
-
-        .header-logo{
-            justify-content: center;
-            max-width: 85%;
-            @media only screen and (max-width: 992px){
-                padding: 2px 0 0 0;
-                z-index: 10;
-                text-align: center;
-                margin-left: 55px;
-                margin-right: 55px;
-                -ms-flex-pack: center;
-                justify-content: center;
-                height: auto;
-                max-width: 92%;
-            }
-            @media only screen and (min-width: 801px){
-                justify-content: space-between;
-                padding: 0 0;
-            }
-            .logo-and-toggle {
-                width: 336px !important;
-            }
-            h1{
-                // @media screen and (min-width: 801px) and (max-width:992px){
-                //     flex: 0 1 74px !important;
-                // }
-                @media only screen and (min-width: 993px){
-                    flex: 0 1 239px !important;
-                }
-            }
-        }
-        .desktopMenu-toggle {
-            @media only screen and (min-width: 801px){
-                display: none;
-            }
-        }
-        
-    }
-    .quickSearchWrap {
-        display: none;
     }
     .mobileMenu-toggle .mobileMenu-toggleIcon, .mobileMenu-toggle .mobileMenu-toggleIcon::before, .mobileMenu-toggle .mobileMenu-toggleIcon::after, .mobileMenu-toggle.is-open .mobileMenu-toggleIcon::before, .mobileMenu-toggle.is-open .mobileMenu-toggleIcon::after {
         background: #ffffff;
     }
-    .mobileMenu-toggle {
-        @media only screen and (min-width: 801px) and (max-width: 992px){
-            display: inline-block;
-            top: 2px;
-            left: 0px;
-        }
+    .h-show {
+        display: none !important;
     }
-    /*Navigation Menu*/
-    .custom-navPages {
-        @media screen and (max-width: 992px){
+    .h-hide {
+        display: block !important;
+    }
+    .header.slim{
+        .h-show {
+            display: block !important;
+        }
+        .h-hide {
             display: none !important;
         }
-        @media only screen and (min-width: 993px) and (max-width: 1160px){
-          margin-left: -8rem;
-        }
-        @media only screen and (min-width: 1161px){
-            margin-left: -10rem;
-          }
-       
-        @media only screen and (min-width: 801px){
-        display: block;
-        background: transparent;
-        border: none;
-        z-index: 1;
-        padding: 0 !important;
-        top: 0 !important; 
-
-        .navPages-action {
-            color: #fff;
-            font-family: 'Almarai';
-            font-weight: 500;
-            padding: 45px 15px;
-            @media only screen and (min-width: 1425px){
-                padding: 45px 35px;
-            }
-
-            @media only screen and (min-width: 1000px){
-                letter-spacing: 3px;
-                font-size: 16px;
-            }
-            @media only screen and (max-width: 1209px){
-                font-size: 14px;
-            }
-            @media screen and (max-width: 1160px){
-                font-size: 14px !important;
-                letter-spacing: 2px !important;
-            }
-            &:hover{
-
-                text-decoration: 3px solid underline;
-                text-underline-offset: 0.7em;
-            }
-          }
-        }
-
-        .navPages-action svg{
-            font-size: 1.5rem;
-            fill: #ffffff;
-            stroke: #ffffff;
-            width: 2.5rem;
-            margin-left: -0.5rem;
-            height: 0.7rem;
-            margin-top: -0.1rem;
-        }
-
-        .navPage-subMenu-action.navPages-action{
-            padding: 15px 0;
-            font-size: 10px;
-            text-transform: uppercase;
-            letter-spacing: 0px !important;
-            text-align: center;
-            font-size: 12px;
+        .navUser-action {
             color: #222222 !important;
-
-            &:hover{
-                text-decoration: none;
-            }
-
         }
-        .navPages-action-moreIcon {
-            svg{
-                height: 0.5rem !important;
-                width: 2rem !important;
-            }
-            @media only screen and (min-width: 801px){
-                display: block;
-                margin-left: -20px !important;
-                margin-top: 0px !important;
-            }
-        }
-
-    }
-    .navPages-action {
-        @media screen and (max-width: 812px){
-            font-size: 14px ;
-        }
-    }
-    .navPages-container{
-        border: none;
-    }
-  
-    .navUser-wrap .navUser ul>li>.icon svg{
-        fill: #fff;
     }
 
-    /*Account Sign In*/
-    .navUser > ul > li:first-child {
-        color: #fff;
-    }
-    .navUser > ul > li:not(:first-child) {
-        @media only screen and (min-width: 801px){
-            border-left: 2px solid #D2D2D2;
-        }
-    }
-    .navUser-action {
-        color: #fff;
-        @media only screen and (max-width: 1209px){
-            font-size: 14px !important;
-        }
-        @media only screen and (max-width: 1160px){
-            font-size: 14px !important;
-            letter-spacing: 1px;
-        }
-        @media only screen and (min-width: 1000px){
-            letter-spacing: 2px;
-            font-size: 16px;
-            font-family: 'Almarai';
-        }
-        @media screen and (max-width: 812px){
-            font-size: 12px ;
-        }
-    }
-    p.cart-quantity {
-        background-color: rgb(221, 36, 36);
-        position: absolute;
-        top: -3px;
-        right: -7px;
-        border-radius: 20px;
-        padding: 2px 3px 2px 5px;
-        text-align: center;
-        color: rgb(255, 255, 255);
-        font-size: 10px;
-
-        @media screen and (max-width: 800px) {
-            top: 14px;
-            right: 11px;
-            padding: 1px 3px 1px 4px;
-        }
-    }
-    .custom-navPages .navPages-mainNav {
-        flex-flow: unset;
-    }
-    .navUser {
-        @media only screen and (min-width: 801px) {
-            padding-left: 4px;     
-        }
-
-    }
-    .h-show{
-        display:none;
-    }
 }
+//End of Home Header
+
+    header.header {
+        background: #fff;
+        background-position: top;
+        background-repeat: no-repeat;
+        background-size: cover !important;
+        width: 100%;
+        border-bottom: 1px solid #cccccc  !important;
+        @media screen and (max-width: 800px){
+            height: 58px !important;
+        }
+
+        .header-logo-image-container {
+            height: 50px;
+            width: auto;
+            @media only screen and (min-width: 801px) and (max-width: 992px){
+                min-height: 50px;
+            }
+            
+        }
+
+        .header-logo--wrap {
+            background: transparent;
+            padding: 0px 0 0px 0;
+            @media only screen and (max-width: 992px){
+                padding: 0; 
+            }
+
+
+            .header-logo{
+                justify-content: center;
+                max-width: 85%;
+                @media only screen and (max-width: 992px){
+                    padding: 2px 0 0 0;
+                    z-index: 10;
+                    text-align: center;
+                    margin-left: 55px;
+                    margin-right: 55px;
+                    -ms-flex-pack: center;
+                    justify-content: center;
+                    height: auto;
+                    max-width: 92%;
+                }
+                @media only screen and (min-width: 801px){
+                    justify-content: space-between;
+                    padding: 0 0;
+                }
+                .logo-and-toggle {
+                    width: 336px !important;
+                }
+                h1{
+                    @media only screen and (min-width: 993px){
+                        flex: 0 1 239px !important;
+                    }
+                }
+            }
+            .desktopMenu-toggle {
+                @media only screen and (min-width: 801px){
+                    display: none;
+                }
+            }
+            
+        }
+        .quickSearchWrap {
+            display: none;
+        }
+        .mobileMenu-toggle .mobileMenu-toggleIcon, .mobileMenu-toggle .mobileMenu-toggleIcon::before, .mobileMenu-toggle .mobileMenu-toggleIcon::after, .mobileMenu-toggle.is-open .mobileMenu-toggleIcon::before, .mobileMenu-toggle.is-open .mobileMenu-toggleIcon::after {
+            background: #222222;
+        }
+        .mobileMenu-toggle {
+            @media only screen and (min-width: 801px) and (max-width: 992px){
+                display: inline-block;
+                top: 2px;
+                left: 0px;
+            }
+        }
+        /*Navigation Menu*/
+        .custom-navPages {
+            @media screen and (max-width: 992px){
+                display: none !important;
+            }
+            @media only screen and (min-width: 993px) and (max-width: 1160px){
+            margin-left: -8rem;
+            }
+            @media only screen and (min-width: 1161px){
+                margin-left: -10rem;
+            }
+        
+            @media only screen and (min-width: 801px){
+            display: block;
+            background: transparent;
+            border: none;
+            z-index: 1;
+            padding: 0 !important;
+            top: 0 !important; 
+
+            .navPages-action {
+                color: #222222;
+                font-family: 'Almarai';
+                font-weight: 600;
+                padding: 45px 15px;
+                @media only screen and (min-width: 1425px){
+                    padding: 45px 35px;
+                }
+
+                @media only screen and (min-width: 1000px){
+                    letter-spacing: 3px;
+                    font-size: 16px;
+                }
+                @media only screen and (max-width: 1209px){
+                    font-size: 14px;
+                }
+                @media screen and (max-width: 1160px){
+                    font-size: 14px !important;
+                    letter-spacing: 2px !important;
+                }
+                &:hover{
+                    text-decoration: 3px solid underline;
+                    text-underline-offset: 0.7em;
+                }
+            }
+            }
+
+            .navPages-action svg{
+                font-size: 1.5rem;
+                fill: #222222;
+                stroke: #222222;
+                width: 2.5rem;
+                margin-left: -0.5rem;
+                height: 0.7rem;
+                margin-top: -0.1rem;
+            }
+
+            .navPage-subMenu-action.navPages-action{
+                padding: 15px 0;
+                font-size: 10px;
+                text-transform: uppercase;
+                letter-spacing: 0px !important;
+                text-align: center;
+                font-size: 12px;
+                color: #222222 !important;
+
+                &:hover{
+                    text-decoration: none !important;
+                }
+
+            }
+            .navPages-action-moreIcon {
+                svg{
+                    height: 0.5rem !important;
+                    width: 2rem !important;
+                }
+                @media only screen and (min-width: 801px){
+                    display: block;
+                    margin-left: -20px !important;
+                    margin-top: 0px !important;
+                }
+            }
+
+        }
+        .navPages-action {
+            @media screen and (max-width: 812px){
+                font-size: 14px ;
+            }
+        }
+        .navPages-container{
+            border: none;
+        }
+    
+        .navUser-wrap .navUser ul>li>.icon svg{
+            fill: #fff;
+        }
+
+        /*Account Sign In*/
+        .navUser > ul > li:first-child {
+            color: #fff;
+        }
+        .navUser > ul > li:not(:first-child) {
+            @media only screen and (min-width: 801px){
+                border-left: 2px solid #D2D2D2;
+            }
+        }
+        
+        .navUser-action {
+            color: #222222;
+            font-weight: 600;
+            @media only screen and (max-width: 1209px){
+                font-size: 14px !important;
+            }
+            @media only screen and (max-width: 1160px){
+                font-size: 14px !important;
+                letter-spacing: 1px;
+            }
+            @media only screen and (min-width: 1000px){
+                letter-spacing: 2px;
+                font-size: 16px;
+                font-family: 'Almarai';
+            }
+            @media screen and (max-width: 812px){
+                font-size: 12px ;
+            }
+        }
+        p.cart-quantity {
+            background-color: rgb(221, 36, 36);
+            position: absolute;
+            top: -3px;
+            right: -7px;
+            border-radius: 20px;
+            padding: 2px 3px 2px 5px;
+            text-align: center;
+            color: rgb(255, 255, 255);
+            font-size: 10px;
+
+            @media screen and (max-width: 800px) {
+                top: 14px;
+                right: 11px;
+                padding: 1px 3px 1px 4px;
+            }
+        }
+        .custom-navPages .navPages-mainNav {
+            flex-flow: unset;
+        }
+        .navUser {
+            @media only screen and (min-width: 801px) {
+                padding-left: 4px;     
+            }
+
+        }
+        .h-show{
+            display:block;
+        }
+    }
+
 
 @media screen and (min-width:801px) {
     .navPages li.navPages-item:hover > .navPages-action:before, .navPage-subMenu .navPages-action:hover:before {
@@ -469,6 +525,9 @@ header.header {
     }
     .dropdown-action{
         padding: 10px 0 !important;
+    }
+    .h-hide{
+        display:none;
     }
 }
 
