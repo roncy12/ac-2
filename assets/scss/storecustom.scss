@@ -2,14 +2,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Almarai&display=swap');
 
-// h1,h2,h3,h4,h5,h6{
-//     font-family: 'Dubai', sans-serif !important;                                              
-// }
+html{
+    scroll-behavior: smooth;
+}
 
 /* Header */
-// .home-body{
-//     padding-top: 0 !important;
-    // overflow-x: hidden;
     .home-body{
          padding-top: 0 !important;
     }
@@ -188,7 +185,7 @@
         color: #fff !important;
         font-family: 'Almarai';
         &:hover{
-            text-decoration: 3px solid underline;
+            text-decoration: 3px solid #fff underline !important;
             text-underline-offset: 0.7em;
         }
         svg{
@@ -261,7 +258,7 @@
 
             .header-logo{
                 justify-content: center;
-                max-width: 85%;
+                max-width: 80%;
                 @media only screen and (max-width: 992px){
                     padding: 2px 0 0 0;
                     z-index: 10;
@@ -347,7 +344,7 @@
                     letter-spacing: 2px !important;
                 }
                 &:hover{
-                    text-decoration: 3px solid underline;
+                    text-decoration: 3px solid #8bd8bd underline;
                     text-underline-offset: 0.7em;
                 }
             }
@@ -460,6 +457,9 @@
         }
         .h-show{
             display:block;
+        }
+        .h-hide{
+            display: none;
         }
     }
 
@@ -592,7 +592,7 @@
 //========================================================
 /*Homepage Featured*/
 .homepage-featured{
-    max-width: 85%;
+    max-width: 80%;
     margin: 2.5rem auto 0;
     .page-heading{
         color: #222222;
@@ -677,6 +677,7 @@
                 background: #1a2b58;
                 color: #8bd8bd;
                 border: 1px solid #1a2b58;
+                text-decoration: none;
             }
 
         }
@@ -1069,7 +1070,7 @@
     border: none;
     .container{
         padding: 2.5rem 0 0 0;
-        max-width: 85%;
+        max-width: 80%;
     }
 
     .footer-info-col {
@@ -1185,4 +1186,492 @@
     }
 }
 
+//=============================================================
+// Category Page
+body{
+    @media screen and (max-width:800px) {
+        padding-top: 58px !important;
+    }
+}
+.categ-body {
+    margin: 0 !important;
+}
+.container.categpage-container {
+    max-width: 100%;
+    padding: 0;
+}
 
+// Banner
+.cbd-tinctures-bg {
+    background: url("../img/categpage/cbd-oil-tinctures-banner.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 2rem 0;
+}
+.cbd-oil-banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-flow: row wrap;
+    max-width: 80%;
+    margin: 0 auto;
+    
+    .text-content {
+        padding: 0;
+        flex: 0 0 47%;
+        max-width: 47%;
+
+        @media screen and (max-width: 667px) {
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+
+        div{
+            @media screen and (max-width: 1425px) {
+                width: 85%;              
+            }
+            @media screen and (max-width: 1425px) {
+                width: 100%;              
+            }
+        }
+        h2{
+            font-family: 'Almarai';
+            font-weight: 500;
+            letter-spacing: 2px;
+            @media screen and (max-width: 1024px) {
+                font-size: revert;
+            }
+            @media screen and (max-width: 300px) {
+                font-size: medium;
+            }
+        }
+        p{
+            font-family: 'Open Sans';
+            br{
+                @media screen and (max-width: 1425px) {
+                    display: none;
+                }
+            }
+        }
+    }
+    .content-image {
+        padding: 0;
+        flex: 0 0 47%;
+        max-width: 47%;
+
+        @media screen and (max-width: 667px) {
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+
+        img {
+            display: block;
+            margin: 0 0 0 auto;
+        }
+    }
+}
+
+// Products
+.sheet-grid-section{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 80%;
+    margin: 0 auto;
+    grid-gap: 25px;
+    @media screen and (min-width: 551px) and (max-width: 800px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    @media screen and (max-width: 550px){
+        grid-template-columns: auto;
+    } 
+    .cdb-product{
+        display: grid;
+        place-items: center;
+        align-content: space-between;
+        border: 1px solid #ebebeb;
+        padding: 1rem 1rem;
+        &:hover{
+            background: #fafafa;
+        }
+
+        h4{
+            font-family: 'Almarai';
+            font-weight: 500;
+            letter-spacing: 2px;
+            color: #222222;
+        }
+
+        .content{
+            width: 100%;
+            span.cbd-price{
+                display: block;
+                color: #222222;
+                text-align: center;
+            }
+            .shop-button {
+                width: 100%;
+                justify-content: center;
+                text-align: center;
+                font-family: "Almarai";
+                margin-bottom: 0;
+                a{
+                    padding: 15px 15px;
+                    background: #fff;
+                    border: 1px solid #8bd8bd;
+                    color: #1a2b58;
+                    margin-bottom: 0;
+                    font-family: "Almarai";
+                    letter-spacing: 2px;
+                    border-radius: 0;
+                    display: block;
+                    text-transform: uppercase;
+                    font-weight: 600;
+                    &:hover{
+                        background: #1a2b58;
+                        color: #8bd8bd;
+                        border: 1px solid #1a2b58;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.categ-features{
+    background: #8bd8bd;
+    padding-bottom: 5rem !important;
+    .features-row{
+        width: 75%;
+        margin: 0 auto;
+        margin-top: 3%;
+        text-align: center;
+        @media screen and (max-width:812px) {
+            width: 90%;
+        }
+        @media screen and (max-width:637px) {
+            display: grid;
+            grid-template-columns: repeat(3, auto) !important;
+        }
+        .col {
+            p{
+                font-family: "Almarai";
+                color: #222222;
+                font-size: 14px;
+                text-align: center;
+                text-transform: uppercase;
+                margin: 1rem 0 0 0;
+                font-weight: bold;
+                @media screen and (max-width: 1200px){
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}
+
+
+// Skin Care Prod
+.cbd-skin-care-bg{
+    background: url("../img/categpage/Topicals.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    padding: 18rem 0rem;
+    @media screen and (max-width:1425px) {
+        background-size: cover;
+    }
+    @media screen and (max-width:1260px) {
+        background-position: center right;
+    }
+
+}
+
+.row-reverse{
+    flex-direction: row-reverse;
+
+    .cbd-properties{
+        .abs-con{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            @media screen and (max-width: 1200px) {
+                width: 80%;
+            }
+            @media screen and (max-width: 937px) {
+                width: 85%;
+                margin: 0 auto;
+                position: relative;
+                top: unset;
+                left: unset;
+                transform: unset;
+            }
+            h4{
+                font-family: 'Almarai';
+                color: #222222;
+                text-transform: uppercase;
+                font-weight: 400;
+                @media screen and (max-width: 867px) {
+                    font-size: medium;
+                }
+                @media screen and (max-width: 667px) {
+                    font-size: smaller;
+                }
+                br{
+                    @media screen and (max-width: 667px) {
+                        display: none;
+                    }
+                }
+            }
+            p{
+                font-family: 'Open Sans';
+                color: #222222;
+
+                @media screen and (max-width: 867px) {
+                    font-size: smaller;
+                }
+                @media screen and (max-width: 736px) {
+                    font-size: x-small;
+                }
+            }
+        }
+    }
+}
+.cbd-body-content{
+    left: 0;
+    right: 90px;
+    position: absolute;
+    transform: translateY(-50%);
+    width: 40rem;
+    margin: 0 0 0 auto;
+    text-align: left;
+    @media screen and (max-width: 1425px) {
+        width: 35rem;
+    }
+    @media screen and (max-width:1000px) {
+        margin: 0 auto;
+        left: 20%;
+        width: auto;
+    }
+    h4{
+        font-family: 'Almarai';
+        color: #fff;
+        text-transform: uppercase;
+        font-weight: 400;
+    }
+    p{
+        font-family: 'Open Sans';
+        color: #fff;
+    }
+}
+
+// Types Skin Care
+
+.types-cbd-ul ul{
+    column-count: 2;
+    li{
+        font-family: 'Almarai';
+        color: #fff;
+        font-size: 1rem;
+        text-transform: uppercase;
+        width: 85%;
+    }
+    p{
+        font-family: 'Open Sans';
+        text-transform: initial;
+        font-size: 12px;
+        margin-top: 1rem;
+        color: #fff;
+    }
+}
+.cbd-main-image img{
+    @media screen and (max-width: 1024px) {
+        height: 100%;
+    }
+
+}
+.cbd-main-image{
+    @media screen and (max-width: 800px) {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+
+.types-cbd-bg{
+    background: url('../img/categpage/rec-bg.png');
+    @media screen and (max-width: 800px) {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+
+    h4{
+        font-family: 'Almarai';
+        color: #fff;
+        text-transform: uppercase;
+        font-weight: 500;
+        @media screen and (max-width: 867px) {
+            font-size: medium;
+        }
+        @media screen and (max-width: 667px) {
+            font-size: smaller;
+        }
+        br{
+            @media screen and (max-width: 667px) {
+                display: none;
+            }
+        }
+        
+    }
+    p{
+        font-family: 'Open Sans';
+        color: #fff;
+        @media screen and (max-width: 867px) {
+            font-size: smaller;
+        }
+        @media screen and (max-width: 736px) {
+            font-size: x-small;
+        }
+    }
+
+    .abs-con {
+        position: absolute;
+        transform: translate(-50%, -50%);
+        top: 50%;
+        left: 50%;
+        width: 80%;
+        @media screen and (max-width: 1024px) {
+            width: 85%;
+            margin: 0 auto;
+            position: relative;
+            top: unset;
+            left: unset;
+            transform: unset;
+        }
+
+    }
+}
+
+// Why Choose Us
+.color-h4{
+    color: #1a2b58 !important;
+    @media screen and (max-width: 937px) {
+        font-size: small;
+    }
+}
+
+.size-p{
+    @media screen and (max-width: 937px) {
+        font-size: x-small;
+    }
+}
+// Frequently Aked Question
+.h4-faqs{
+    text-align: center;
+    color: #222222;
+    font-family: 'Almarai';
+    font-weight: 400;
+    letter-spacing: 1px;
+    margin: 5rem 0 2.5rem 0;
+}
+.custom-accordion {
+    background-color: #fff;
+    color: #1a2b58;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #aaaaaa;
+    max-width: 80%;
+    margin: 0 auto;
+    div{
+        width: auto;
+    }
+    div:last-child {
+        text-align: end;
+    }
+    .icon.accordion-indicator {
+        fill: #888888;
+    }
+
+
+  }
+  .active{
+    .icon.accordion-indicator {
+        transform: rotateZ(45deg);
+    }
+}
+
+  
+  .panel {
+    padding: 0 18px;
+    display: none;
+    background-color: white;
+    overflow: hidden;
+    max-width: 80%;
+    margin: 0 auto;
+  }
+
+
+//   To Sum It up
+
+.sum-img{
+    max-width: 75%;
+    margin: 0 0 0 auto;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    justify-content: center;
+    place-content: center;
+    justify-items: center;
+    align-items: center;
+}
+.table-div-con{
+    width: 80% !important;
+    margin: 0 auto;
+}
+.categ-table{
+    width: 95% !important;
+    margin: 0 0 0 auto;
+    @media screen and (max-width: 800px) {
+        width: auto !important;
+    }
+
+}
+
+.categ-table tbody tr th {
+    padding: 1.5rem;
+    width: 20%;
+    color: #1a2b58 !important;
+    font-family: 'Almarai';
+    font-weight: 400 !important;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    @media screen and (max-width: 480px) {
+        padding: 1.5rem 0;
+    }
+    
+}
+.categ-table tbody tr td{
+    padding: 1.8rem 1.5rem;
+    font-family: 'Almarai';
+    font-weight: 400 !important;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    @media screen and (max-width: 568px) {
+        padding: 1.5rem 0.75rem;
+    }
+    @media screen and (max-width: 480px) {
+        padding: 1rem 0 0 0;
+    }
+    img{
+        display: block;
+        margin: 0 auto;
+    }
+}

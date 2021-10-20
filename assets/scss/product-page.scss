@@ -1,13 +1,16 @@
 .container.custom-prod {
-    max-width: 85%;
+    max-width: 80%;
     padding: 0;
 }
-
+.container.breadcrumb-con {
+    max-width: 81% !important;
+    padding: 0;
+}
 .custom-product-container {
 
     .productView{
         @media only screen and (min-width: 801px){
-            justify-content: space-between;
+            justify-content: space-evenly;
         }
 
     }
@@ -18,6 +21,7 @@
             flex: 0 1 50%;
             max-width: 100%;
             width: 50%;
+            padding: 0 2.5rem 0 0;
         }
         .productView-image {
             min-height: 366px;
@@ -44,7 +48,7 @@
                 font-weight: 400;
                 width: 100%;
                 text-align: center;
-                border: 1px solid #8bd8bd;
+                border: 2px solid #8bd8bd;
                 @media screen and(min-width:481px) and (max-width: 992px) {
                     font-size: 14px;
                     letter-spacing: 0px;
@@ -74,7 +78,7 @@
         @media only screen and (min-width: 801px){
             color: #4e4e4e;
             flex: 0 1 48%;
-            padding: 0 0px;
+            padding: 0px 24px 0px 18px;
         }
     }
 
@@ -126,7 +130,10 @@
     .custom-tabcontainer{
         padding: 0;
         .accordion-navigation.toggleLink{
-            border-bottom-width: 1px;     
+            border-bottom-width: 1px;
+            border-top: 1px solid #cccccc;
+            border-bottom: 1px solid #cccccc;
+
             .is-open{
                 border-bottom: 0;
             }
@@ -146,7 +153,7 @@
             padding: 0.5rem 0.5rem;
             font-family: "Open Sans";
             color: #888888;
-            line-height: 1.7;
+            line-height: 1.8;
             border-bottom: 1px solid #cccccc;
             ul>li::marker{
                 color: #333333 !important;
@@ -162,7 +169,13 @@
             border-bottom-width: 0px;
             border-top: 1px solid #cccccc;
         }
-
+        .icon.accordion-indicator {
+            fill: #888888;
+        }
+        .toggleLink.is-open .toggleLink-text--on {
+            display: inline-block;
+            transform: rotateZ(45deg);
+        }
     }
 // Flavor Selection
     label.form-label {
@@ -207,11 +220,14 @@
         font-family: "Open Sans";
         color: #888888;
         width: 100%;
-
+        padding: 0 2px 0 0;
+        @media screen and (max-width: 1544px) {
+            font-size: 9px;
+        }
     }
     span.form-option-variant>img {
         width: auto;
-        height: 45px;
+        height: 35px;
     }
     input#form-action-addToCart {
         background-color: #ffffff;
@@ -227,10 +243,10 @@
     .set-select-flex {
         display: inline-block;
         width: 48%;
-        margin-bottom: 1rem;
+        margin: 0.5rem 0 1.4rem 0;
     }
     .set-select-flex:last-child {
-        float: right;
+        float: unset;
         width: 50%;
     }
     .form-select--small, .form-select--date {
@@ -244,12 +260,45 @@
     .flex-quantity-cart {
         display: flex;
         align-items: center;
+        @media screen and (max-width: 400px) {
+            display: grid;
+            grid-row-gap: 1rem;
+            width: 100%;
+        }
+
 
 
         .form-action{
-            width: 75%;
+            // width: 80%;
+            flex: 1;
             margin: 0 !important;
+            padding: 0 0 0 1rem;
+            @media screen and (max-width: 837px) {
+                flex: 0 0 50%;
+                padding: 0;
+            }
+            @media screen and (max-width: 800px) {
+                flex: 1;
+                padding: 0 0 0 1rem;
+            }
+            @media screen and (max-width: 400px) {
+                padding: 0;
+            }
+
+            // @media screen and (max-width: 1580px) {
+            //     width: 77%;
+            // }
+            // @media screen and (max-width: 1510px) {
+            //     width: 76%;
+            // }
+            // @media screen and (max-width: 1450px) {
+            //     width: 75%;
+            // }
+            // @media screen and (max-width: 1400px) {
+            //     width: 74%;
+            // }
             .button{
+                line-height: 1.6rem;
                 @media screen and (min-width: 801px) {
                     width: 100%;
                 }
@@ -259,16 +308,31 @@
         .form-field.form-field--increments{
             margin-bottom: 0;
             @media screen and (min-width: 1161px) {
-                width: 30%;
+                width: auto;
             }
             @media screen and (max-width: 1160px) {
-                width: 35%;
+                width: auto;
             }
             .form-label{
                 display: none;
             }
         }
+            .form-input--incrementTotal {
+                width: 52px;
+                height: 52px;
+            }
+            .form-increment {
+                max-width: 100%;
+                min-width: 100%;
 
+                @media screen and (max-width: 400px) {
+                    display: flex;
+                    justify-content: center;
+                }
+            }
+            .form-increment .button {
+                height: 52px;
+            }
     }
 
     .productView-options-wrap .productView-options-inner{
@@ -288,8 +352,8 @@
         align-items: center;
         margin-top: 1rem;
         justify-content: space-between;
-        border-top: 1px solid #888888;
-        border-bottom: 1px solid #888888;
+        border-top: 1px solid #cccccc;
+        border-bottom: 1px solid #cccccc;
         margin-top: 2.5rem;
 
         a.button.button--secondary.dropdown-menu-button.wishlist-button {
@@ -299,6 +363,9 @@
         }
 
         .socialLinks {
+            @media only screen and (max-width: 800px){
+                top: unset;
+            }
             line-height: 25px;
             .socialLinks-item{
                 margin: 0 14px 0px 0;
@@ -311,7 +378,7 @@
 //========================================================
 /*Related Products*/
 .related-products{
-    max-width: 85%;
+    max-width: 80%;
     margin: 2.5rem auto 2.5rem;
     h3{
         font-family: 'Almarai';
@@ -408,51 +475,6 @@
         }
 
     }
-    .top-seller {
-        position: relative;
-        padding-top: 1.5rem;
-        a.best-seller-link {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background: #1a2b58;
-            color: #fff;
-            padding: 15px 15px;
-            text-transform: uppercase;
-            font-family: "Almarai";
-            letter-spacing: 2px;
-            font-weight: 400;
-            width: 25%;
-            text-align: center;
-            @media screen and(min-width:481px) and (max-width: 992px) {
-                font-size: 14px;
-                letter-spacing: 0px;
-            }
-            @media screen and (max-width: 800px) {
-                width: 50%;
-            }
-            @media screen and (max-width: 480px) {
-                width: 100%;
-            }
-            &:hover{
-                background: #1a2b58;
-                color: #8bd8bd;
-                border: 1px solid #1a2b58;
-            }
-            @media screen and (max-width: 637px) {
-                padding: 15px 25px;
-            }
-            @media screen and (max-width: 480px) {
-                padding: 15px 15px;
-                font-size: 10px !important;
-            }
-            @media screen and (max-width: 400px) {
-                font-size: 10px !important;
-            }
-
-        }
-    }
 
     .productGrid .product {
         @media screen and (max-width: 800px) {
@@ -472,17 +494,26 @@
 //========================================================
 // ACcordion 
 .custom-tabs{
-    max-width: 85% !important;
+    max-width: 80% !important;
     padding: 0px !important;
     width: 100% !important;
     margin-top: 4.5rem;
     .accordion-block:last-child .accordion-navigation {
         border-bottom-width: 1px;
+        border-top: #cccccc solid 1px;
+        border-bottom: #cccccc solid 1px;
     }
     .accordion-block:last-child .accordion-navigation.is-open{
         border-bottom-width: 0 !important;
     }
     .accordion-content {
-        border-bottom: 1px solid #ebebeb;
+        border-bottom: 1px solid #cccccc;
+    }
+    .icon.accordion-indicator {
+        fill: #888888;
+    }
+    .toggleLink.is-open .toggleLink-text--on {
+        display: inline-block;
+        transform: rotateZ(45deg);
     }
 }

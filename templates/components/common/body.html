@@ -1,4 +1,4 @@
-<div class="body {{#if template_file '===' 'pages/home'}}home{{/if}}" id='main-content' role='main' data-currency-code="{{currency_selector.active_currency_code}}">
+<div class="body {{#if template_file '===' 'pages/home'}}home{{/if}}{{#if template_file '===' 'pages/category'}}categ-body{{/if}}" id='main-content' role='main' data-currency-code="{{currency_selector.active_currency_code}}">
     {{#block "hero"}} {{/block}}
     {{#block "page"}} {{/block}}
     <div style="display: none;">{{#block "hero-bottom"}} {{/block}}</div>

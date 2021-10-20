@@ -2,7 +2,7 @@
     {{#or product.description product.videos.list.length}}
         <div class="accordion-block">
             <div
-                class="accordion-navigation toggleLink is-open"
+                class="accordion-navigation toggleLink"
                 role="button"
                 data-collapsible="#accordion--description">
                 <h5 class="accordion-title">
@@ -14,11 +14,11 @@
                         <use xlink:href="#icon-plus" />
                     </svg>
                     <svg class="icon accordion-indicator toggleLink-text toggleLink-text--on">
-                        <use xlink:href="#icon-minus" />
+                        <use xlink:href="#icon-plus" />
                     </svg>
                 </div>
             </div>
-            <div id="accordion--description" class="accordion-content is-open">
+            <div id="accordion--description" class="accordion-content">
                 <div {{#if schema}} itemprop="description"{{/if}}>
                     {{{product.description}}}
                     {{{snippet 'product_description'}}}

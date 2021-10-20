@@ -1,7 +1,9 @@
 {
   "customLayouts": {
     "brand": {},
-    "category": {},
+    "category": {
+      "category-cbd-tinctures.html": "/cbd-tinctures/"
+    },
     "page": {},
     "product": {}
   },

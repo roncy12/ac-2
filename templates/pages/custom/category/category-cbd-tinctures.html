@@ -1,0 +1,350 @@
+{{#partial "page"}}
+
+<div class="container categpage-container">
+    <!-- {{> components/common/breadcrumbs breadcrumbs=breadcrumbs}} -->
+    <main class="page">
+        <!-- 
+        {{#unless theme_settings.hide_page_heading }}
+            <h1 class="page-heading">{{ page.title }}</h1>
+        {{/unless}}
+     -->
+        {{#if page.sub_pages}}
+        <nav class="navBar navBar--sub">
+            <ul class="navBar-section account-navigation">
+            {{#each page.sub_pages}}
+                <li class="navBar-item"><a class="navBar-action" href="{{url}}">{{title}}</a></li>
+            {{/each}}
+            </ul>
+        </nav>
+        {{/if}}
+        
+        {{{region name="page_builder_content"}}}
+    
+        <div class="page-content">
+            <!-- Image Banner -->
+            <div class="cbd-tinctures-bg">
+                <div class="cbd-oil-banner">
+                    <div class="col-md-6 col-sm-6 col-xs-6 text-content">
+                        <div>
+                            <h2 class="text-light">Cbd Oil Tinctures</h2>
+                            <p class="text-light">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor<br>
+                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud<br> exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute<br> irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla<br> pariatur.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-6 col-xs-6 content-image">
+                        <img src="{{cdn '../img/categpage/banner-right-side.png'}}" />
+                    </div>
+                </div>
+            </div>
+            <!--Grid Products  -->
+            <div class="sheet-grid-section mt-5 pt-3">
+                <div class="cdb-product">
+                    <h4>CBD BALMS</h4>
+                    <img class="lazyload" src="{{cdn '../img/categpage/cbd-balm.png'}}" >
+                    <div class="content">
+                        <span class="cbd-price">$14.99 - $49.99</span>
+                        <div>&nbsp;</div>
+                        <div class="shop-button">
+                            <a>Shop Cbd Balms</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="cdb-product">
+                    <h4>CBD BATH & BODY OILS</h4>
+                    <img class="lazyload" src="{{cdn '../img/categpage/cbd-bath-body-oil.png'}}">
+                    <div class="content">
+                        <span class="cbd-price">$14.99 - $49.99</span>
+                        <div>&nbsp;</div>
+                        <div class="shop-button">
+                            <a>Shop Cbd Bath & Body Oils</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="cdb-product">
+                    <h4>CBD CREMES</h4>
+                    <img class="lazyload" src="{{cdn '../img/categpage/cbd-cremes.png'}}">
+                    <div class="content">
+                        <span class="cbd-price">$14.99 - $49.99</span>
+                        <div>&nbsp;</div>
+                        <div class="shop-button">
+                            <a>Shop Cbd Cremes</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="cdb-product">
+                    <h4 class="mb-5">CBD LOTIONS</h4>
+                    <img class="lazyload" src="{{cdn '../img/categpage/cbd-lotions.png'}}" height="350">
+                    <div class="content">
+                        <span class="cbd-price">$14.99 - $49.99</span>
+                        <div>&nbsp;</div>
+                        <div class="shop-button">
+                            <a>Shop Cbd Lotions</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="cdb-product">
+                    <h4 class="mb-5">CBD ROLL-ONS</h4>
+                    <img class="lazyload" src="{{cdn '../img/categpage/cbd-roll-ons.png'}}" height="350">
+                    <div class="content">
+                        <span class="cbd-price">$14.99 - $49.99</span>
+                        <div>&nbsp;</div>
+                        <div class="shop-button">
+                            <a>Shop Cbd Roll-ons</a>
+                        </div>
+                    </div>
+                </div>
+            
+             </div>
+             <!-- Features -->
+             <div class="p-5 mt-5 categ-features">
+                <div class="features-row row">
+                    <div class="col col1">
+                        <img src="{{cdn '../img/categpage/chemistry.png'}}">
+                        <p>Third-Party<br> Lab Test</p>
+                    </div>
+                    
+                    <div class="col col2">
+                        <img src="{{cdn '../img/categpage/usa-hemp.png'}}">
+                        <p>Usa Hemp</p>
+                    </div>
+                    
+                    <div class="col col3">
+                        <img src="{{cdn '../img/categpage/superior-circle.png'}}">
+                        <p>Superior <br>Broad Spectrum</p>
+                    </div>
+                    
+                    <div class="col col4">
+                        <img src="{{cdn '../img/categpage/thc.png'}}">
+                        <p>Non-Thc1</p>
+                    </div>
+                    
+                    <div class="col col5">
+                        <img src="{{cdn '../img/categpage/GMP.png'}}">
+                        <p>Gmp Certified</p>
+                    </div>
+                </div>
+             </div>
+             <!-- Cbd Skin Care Products -->
+             <div class="cbd-skin-care-bg">
+                <div class="row cbd-skin-care w-100">
+                    <div class="col-md-6 col-sm-6 col-xs-2 development-main-image">
+                        <!-- <img src="https://alwaysopencommerce.com/wp-content/themes/alwaysopencommerce/assets/images/akeneo-pim.png"> -->
+                    </div>
+                    
+                    <div class="col-md-6 col-sm-6 col-xs-12 cbd-body-content">
+                      <h4>Cbd Skin Care Products</h4>
+    
+                      <div>
+                          <p class="top">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+    
+                      </div>
+                    </div>
+                </div>            
+            </div>
+            <!--Properties CBD Skin Care  -->
+            <div class="row properties-cbd row-reverse w-100 position-relative mx-0">
+                    <div class="col-md-6 col-sm-6 col-xs-2 px-0">
+                        <img src="{{cdn '../img/categpage/cbd-massageoil.png'}}">
+                    </div>
+                    
+                    <div class="col-md-6 col-sm-6 col-xs-12 position-relative cbd-properties">
+                        <div class="abs-con">                     
+                            <h4>Properties of Cbd<br> Skin Care Products</h4>
+                            <div>
+                                <p class="top">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                                <p>Habitant morbi tristique senectus et netus et. Etiam dignissim diam quis enim lobortis scelerisque fermentum. Massa massa ultricies mi quis hendrerit dolor magna eget est. Nulla at volutpat diam ut. Eu sem integer vitae justo eget. Tellus cras adipiscing enim eu turpis egestas pretium. Aliquam ut porttitor leo a diam sollicitudin. Senectus et netus et malesuada fames ac. Tristique et egestas quis ipsum.</p>    
+                            </div>
+                        </div>
+                    </div>
+            </div>   
+            
+            <!-- Types of Cbd Skin Care Products -->
+            <div class="types-cbd-skin position-relative">
+                <div class="row cbd-skin-care w-100 mx-0 position-relative">
+                    <div class="col-md-6 col-sm-6 col-xs-2 cbd-main-image mx-0 px-0">
+                        <img src="{{cdn '../img/categpage/skin-care-prod.png'}}">
+                    </div>
+                    
+                    <div class="col-md-6 col-sm-6 col-xs-12 types-cbd-bg px-0 position-relative">
+                        <div class="abs-con">
+                            <h4>Types of Cbd<br> Skin Care Products</h4>
+                            <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+          
+                            <div class="types-cbd-ul">
+                                <ul>
+                                    <li>
+                                        Balms
+                                        <p>Sed id semper risus in hendrerit gravida rutrum quisque. Pellentesque adipiscing commodo elit at imperdiet dui. Amet tellus cras adipiscing enim eu turpis egestas pretium. Id porta nibh venenatis cras sed.</p>
+                                    </li>
+                                    <li>
+                                      Moisturizers
+                                      <p>Lectus nulla at volutpat diam ut venenatis tellus. Nunc congue nisi vitae suscipit tellus mauris. Morbi tincidunt augue interdum velit. Nunc aliquet bibendum enim facilisis gravida.
+                                          Mauris augue neque gravida in.</p>
+                                    </li>
+                                    <li>
+                                      Oils
+                                      <p>Aliquam etiam erat velit scelerisque in. Et netus et malesuada fames ac. Consectetur adipiscing elit pellentesque habitant morbi tristique senectus et netus. Amet mattis vulputate enim nulla aliquet.</p>
+                                    </li>
+        
+                                    <li>
+                                      Cremes
+                                      <p>Aliquam etiam erat velit scelerisque in. Purus gravida quis blandit turpis cursus. Dolor purus non enim praesent elementum facilisis. Ante in nibh mauris cursus. Massa sed elementum tempus egestas.</p>
+                                    </li>
+                                </ul>    
+                            </div>
+                        </div>
+
+                    </div>
+                </div>            
+            </div>
+            <!-- Why Choose Us -->
+            <div class="row properties-cbd row-reverse w-100 position-relative mx-0">
+                <div class="col-md-6 col-sm-6 col-xs-2 px-0">
+                    <img src="{{cdn '../img/categpage/why-choose.png'}}">
+                </div>
+                
+                <div class="col-md-6 col-sm-6 col-xs-12 position-relative cbd-properties">
+                    <div class="abs-con">                     
+                        <h4>Why Choose Us?</h4>
+                        <div class="font-h4">
+                            <h4 class="color-h4">Lorem ipsum dolor sit amet</h4>
+                            <p class="size-p">Sed id semper risus in hendrerit gravida rutrum quisque. Pellentesque adipiscing commodo elit at imperdiet dui. Amet tellus cras adipiscing enim eu turpis egestas pretium. Id porta nibh venenatis cras sed.</p>
+                            <h4 class="color-h4">Ut enim ad minim veniam</h4>
+                            <p  class="size-p">Sed id semper risus in hendrerit gravida rutrum quisque. Pellentesque adipiscing commodo elit at imperdiet dui. Amet tellus cras adipiscing enim eu turpis egestas pretium. Id porta nibh venenatis cras sed.</p>    
+                            <h4 class="color-h4">Duis aute dolor in reprehenderit</h4>
+                            <p  class="size-p">Sed id semper risus in hendrerit gravida rutrum quisque. Pellentesque adipiscing commodo elit at imperdiet dui. Amet tellus cras adipiscing enim eu turpis egestas pretium. Id porta nibh venenatis cras sed.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>   
+            <!-- To Sum It Up -->
+            <h2 class="h4-faqs mb-0">To Sum It Up</h2>
+            <p class="text-center w-75 mx-auto">Sed id semper risus in hendrerit gravida rutrum quisque. Pellentesque adipiscing commodo elit at imperdiet dui.<br> Amet tellus cras adipiscing enim </p>
+
+            <div class="table-div-con">
+
+                <div class="sum-img mt-5 pt-2" data-aos="fade-up">
+                    <div class="">
+                        <img class="lazyload" src="{{cdn '../img/categpage/copy/cbd-balm.png'}}" />
+                    </div>
+                    <div class="">
+                        <img class="lazyload" src="{{cdn '../img/categpage/copy/cbd-roll-on.png'}}" />
+                    </div>
+                    <div class="">
+                        <img class="lazyload" src="{{cdn '../img/categpage/copy/cbd-lotion.png'}}" />
+                    </div>
+                     <div class="">
+                         <img class="lazyload" src="{{cdn '../img/categpage/copy/cbd-rev.png'}}" />
+                    </div>
+                     <div class="">
+                         <img class="lazyload" src="{{cdn '../img/categpage/copy/cbd-rel.png'}}" />
+                    </div>
+                </div>
+
+                <table class="table table-bordered categ-table">
+                    <tbody>
+                      <tr>
+                        <th scope="row">Lorem ipsum</th>
+                        <td><img src="{{cdn '../img/categpage/check.png'}}"></td>
+                        <td> </td>
+                        <td><img src="{{cdn '../img/categpage/check.png'}}"></td>
+                        <td> </td>
+                        <td><img src="{{cdn '../img/categpage/check.png'}}"></td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Ut enim ad</th>
+                        <td><img src="{{cdn '../img/categpage/check.png'}}"></td>
+                        <td> </td>
+                        <td> </td>
+                        <td><img src="{{cdn '../img/categpage/check.png'}}"></td>
+                        <td> </td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Duis aute irure</th>
+                        <td> </td>
+                        <td><img src="{{cdn '../img/categpage/check.png'}}"></td>
+                        <td> </td>
+                        <td><img src="{{cdn '../img/categpage/check.png'}}"></td>
+                        <td><img src="{{cdn '../img/categpage/check.png'}}"></td>
+                      </tr>
+                      <tr>
+                        <th scope="row">in reprehenderit</th>
+                        <td><img src="{{cdn '../img/categpage/check.png'}}"></td>
+                        <td><img src="{{cdn '../img/categpage/check.png'}}"></td>
+                        <td><img src="{{cdn '../img/categpage/check.png'}}"></td>
+                        <td> </td>
+                        <td> </td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Duis aute irure</th>
+                        <td> </td>
+                        <td> </td>
+                        <td><img src="{{cdn '../img/categpage/check.png'}}"></td>
+                        <td><img src="{{cdn '../img/categpage/check.png'}}"></td>
+                        <td><img src="{{cdn '../img/categpage/check.png'}}"></td>
+                      </tr>
+                    </tbody>
+                  </table>
+            </div>
+
+
+            <!-- Frequently Asked Question -->
+
+            <h2 class="h4-faqs">Frequently Asked Questions</h2>
+            <button class="custom-accordion">
+                <div>Lorem ipsum dolor sit amet, consectetur adipiscing?</div>
+                <div><svg class="icon accordion-indicator toggleLink-text toggleLink-text--off">
+                <use xlink:href="#icon-plus"> </use>
+                </svg></div>
+            </button>
+            <div class="panel">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+            
+            <button class="custom-accordion">
+                <div>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris?</div>
+                <div><svg class="icon accordion-indicator toggleLink-text toggleLink-text--off">
+                <use xlink:href="#icon-plus"> </use>
+                </svg></div>
+            </button>
+            <div class="panel">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+            
+            <button class="custom-accordion">
+                <div>Duis aute irure dolor in reprehenderit in voluptate?</div>
+                <div><svg class="icon accordion-indicator toggleLink-text toggleLink-text--off">
+                <use xlink:href="#icon-plus"> </use>
+                </svg></div>
+            </button>
+            <div class="panel">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+            <button class="custom-accordion">
+                <div>Excepteur sint occaecat cupidatat non proident, sunt in?</div>
+                <div><svg class="icon accordion-indicator toggleLink-text toggleLink-text--off">
+                <use xlink:href="#icon-plus"> </use>
+                </svg></div>
+            </button>
+            <div class="panel">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+            <button class="custom-accordion border-bottom  border-secondary mb-5">
+                <div>Sed do eiusmod tempor incididunt ut labore et dolore?</div>
+                <div><svg class="icon accordion-indicator toggleLink-text toggleLink-text--off">
+                <use xlink:href="#icon-plus"> </use>
+                </svg></div>
+            </button>
+            <div class="panel border-bottom border-secondary">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+        </div>
+        </div>
+    </main>
+</div>
+
+{{/partial}}
+
+{{> layout/base}}
